@@ -27,7 +27,13 @@ app.use(function (req, res, next) {
 });
 
 app.get("/", (req, res) =>{
-  console.log("welcome to server application")
+  try{
+    console.log("welcome to server application")
+    res.status(200).json("Welcome to the server application")
+  } catch(e) {
+    console.log(e.error)
+    res.status(404).json("Error found in code")
+  }
 })
 
 app.post("/sendEmail", (req, res) => {
