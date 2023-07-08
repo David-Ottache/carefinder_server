@@ -26,6 +26,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get("/", (req, res) =>{
+  console.log("welcome to server application")
+})
+
 app.post("/sendEmail", (req, res) => {
   const { email, subject, message } = req.body;
   sendEmail(email, subject, message)
