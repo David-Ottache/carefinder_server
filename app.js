@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const { sendEmail } = require('./sendEmail');
 
-const allowedOrigins = ["http://localhost:3000","https://carefinder-app-nine.vercel.app"];
+const allowedOrigins = ["http://localhost:3000","https://carefinder-server-psi.vercel.app"];
 
 const corsOptions = {
   origin: (origin, callback) => {
